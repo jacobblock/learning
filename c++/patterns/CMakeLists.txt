@@ -1,0 +1,5 @@
+#add_executable(singleton singleton.cpp)
+#add_executable(factory factory.cpp)
+#add_executable(repository repository.cpp)
+add_executable(strategy_pattern strategy_pattern.cpp)
+add_diagram(strategy_pattern.png strategy_pattern.uml)

@@ -1,19 +1,50 @@
 To Learn:
 
+Types of Development
+-------
+TDD -- Test Driven Development
+BDD -- Behavior Driven Development, feature driven approach to TDD. BDD is TDD done right.
+Units of Code -- 
+Design by contract -- 
+
+Dependency Injection & Inversion of Control
+-------------------------------------------
+C++ has templates for developing type based programs, which has the benefit of no introspection overhead at run-time (only at compile-time).
+
+[1] http://adam.younglogic.com/2008/07/dependency-injection-in-c/
+
+
 Inversion of Control
-
-TDD - test driven development
-BDD - 
-
 anti-patterns? service locator and singleton
 alternatives to relational databases
+
 stateless vs stateful systems
+-----------------------------
+Stateless is less complicated and usually scales easier. This is because there is less book-keeping invovled in passing data and content around. Many web technologies relie on g
+
 convention over configuration?
-Mocks vs stubs/fakes
 What is YAGNI?
+
+Mocks vs stubs/fakes
+--------------------
+A distinction between state verification and behavior verification.
+
+[1] http://martinfowler.com/articles/mocksArentStubs.html
+
 What is SOLID?
-Dependency injection and inversion of control?
-why are interfaces important?
+--------------
+SOLID (Single responsibility, Open-closed, Liskov substitution, Interface segregation, and Dependency Inversion) by Bob Martin.
+Single responsibility: One class has one responsibility.
+Open/closed: Software entiries should be open to extension and closed for modification.
+Liskov Substitution: Objects should be replaceable with instances of their subtypes and remain correct (design by contract)
+Interface Segregation: Many client-specific interfaces instead of general-purpose interfaces
+Dependency Inversion -- Depend upon abstractions, do not depend on concretions (dependency injection is one method)
+
+Why are interfaces important?
+-----------------------------
+Guarantees an implementation in a derived class.
+
+
 what is a 3 tier app vs a 2 tier app?
 Benefits and cons of OOP
 Head First Design Patterns
@@ -21,7 +52,7 @@ Locking vs lockless concurrency models
 Function vs predicate?
 Heap vs stack
 call to virtual members in the constructor
-
+Alexandrescu’s Modern C++ Design
 
 Uncle Bob's Book Agile Principles, PAtterns, and PRactices in C#
 
@@ -31,7 +62,16 @@ single responsibility principle
 MVP vs MVC vs MVVM? How do they relate?
 
 What is separation of concerns?
+Policy-based design
+Contract programming
 
+OOP
+---
+Beware the danger of quasi-classes [1]. Pseudo-classes are a collection of static members (no object instantiation needed, such as math functions). Useful to wrap in a namespace instead.
+
+Use getters and setters for configuring and determening the configuration of a class or data model (validation, sanitzaiton, etc.). You do not need to pair setters and getters. There should be a reason to expose state changing. Consider that all properties should be set at instantiation (why change it in the middle of what its trying to do? Just make another one. Else you should completely manage the internal consistency of the state. PROTECTION AND ENCAPSULATION!
+
+[1] http://www.idinews.com/quasiClass.pdf
 
 Databases
 ---------

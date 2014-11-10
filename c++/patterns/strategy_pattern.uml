@@ -1,0 +1,4 @@
+@startuml
+StrategyA -> Strategy
+StrategyB -> Strategy
+@enduml
