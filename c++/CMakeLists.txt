@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project(learning)
+set(CMAKE_VERBOSE_MAKEFILE on)
+set(CMAKE_CXX_FLAGS "-Wall -std=c++11")
+set(CMAKE_BUILD_TYPE debug)
+#add_executable(singleton singleton.cpp)
+#add_executable(factory factory.cpp)
+add_executable(respository repository.cpp)
